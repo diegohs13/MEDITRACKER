@@ -397,43 +397,6 @@ def dados_diario(conexao_oracle, documento):
     insert(conexao_oracle, sql_tb_reg_diario_medicamento, id_registro_diario_med, data_registro, id_trat_med_paciente, medicamento_tomado)
 
 
-'''def adicionar_medicamento(conexao_oracle, documento):
-    print('-' * 100)
-    print('Olá, vamos fazer algumas perguntas para adicionarmos seu novo medicamento!')
-    print('-' * 100)
-
-    nome_doenca = dados_cadastro('nome doenca')
-    cid_doenca = dados_cadastro('cid doenca')
-    medicamento = dados_cadastro('medicamento')
-    dosagem = dados_cadastro('dosagem')
-    str_dosagem = 'mg - ml'
-    ano_tratamento = dados_cadastro('ano tratamento')
-    mes_tratamento = dados_cadastro('mes tratamento')
-    dia_tratamento = dados_cadastro('dia tratamento')
-    data_tratamento = f'{ano_tratamento}/{mes_tratamento}/{dia_tratamento}'
-
-    id_doenca = gerar_id_aleatoria()
-    id_medicamento = gerar_id_aleatoria()
-    id_tipo_dosagem = gerar_id_aleatoria()
-    id_med_dosagem = gerar_id_aleatoria()
-    id_paciente = documento[:3]
-    id_trat_med_paciente = gerar_id_aleatoria()
-
-    
-    sql_tb_doenca = f'insert into TB_MTC_DOENCA (ID_DOENCA, NOME_DOENCA, CID_DOENCA) values (:1, :2, :3)'
-    sql_tb_medicamento = f'insert into TB_MTC_MEDICAMENTO (ID_MEDICAMENTO, NOME_MEDICAMENTO, DOSAGEM_MEDICAMENTO) values (:1, :2, :3)'
-    sql_tb_forma_dosagem = f'insert into TB_MTC_FORMA_DOSAGEM (ID_TIPO_DOSAGEM, DESCRICAO_TIPO_DOSAGEM) values (:1, :2)'
-    sql_tb_med_dosagem = f'insert into TB_MTC_MED_DOSAGEM (ID_MEDICAMENTO, ID_TIPO_DOSAGEM, ID_MED_DOSAGEM) values (:1, :2, :3)'
-    sql_tb_trat_med_paciente = f'insert into TB_MTC_TRAT_MED_PACIENTE (ID_TRAT_MED_PACIENTE, DATA_INICIO_TRATAMENTO, ID_DOENCA, ID_PACIENTE, ID_MED_DOSAGEM) values (:1, :2, :3, :4, :5)'
-
-
-    insert(conexao_oracle, sql_tb_doenca, id_doenca, nome_doenca, cid_doenca)
-    insert(conexao_oracle, sql_tb_medicamento, id_medicamento, medicamento, dosagem)
-    insert(conexao_oracle, sql_tb_forma_dosagem, id_tipo_dosagem, str_dosagem)
-    insert(conexao_oracle, sql_tb_med_dosagem, id_medicamento, id_tipo_dosagem, id_med_dosagem)
-    insert(conexao_oracle, sql_tb_trat_med_paciente, id_trat_med_paciente, data_tratamento, id_doenca, id_paciente, id_med_dosagem)'''
-
-
 def escolha_usuario():
     while True:
         print('-' * 100)
