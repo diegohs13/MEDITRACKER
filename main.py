@@ -741,12 +741,11 @@ def menu_inicial():
     print('-' * 100)
     print('[0] Sair\n'
           '[1] Adicionar informações diárias (sintomas, medicamentos tomados e etc)\n'
-          '[2] Adicionar medicamento\n'
-          '[3] Alterar dados pessoais\n'
-          '[4] Excluir dados pessoais\n'
-          '[5] Remédios tomados\n'
-          '[6] Registros diários\n'
-          '[7] Pacientes, seus medicamentos e quantidade de dias em que não foram tomados')
+          '[2] Alterar dados pessoais\n'
+          '[3] Excluir dados pessoais\n'
+          '[4] Remédios tomados\n'
+          '[5] Registros diários\n'
+          '[6] Pacientes, seus medicamentos e quantidade de dias em que não foram tomados')
     print('-' * 100)
 
     while True:
@@ -799,36 +798,30 @@ if __name__ == "__main__":
 
             elif menu == '2':
                 print('-' * 100)
-                print('Voce escolheu adicionar medicamentos')
-                print('-' * 100)
-                adicionar_medicamento(conexao, cpf)
-
-            elif menu == '3':
-                print('-' * 100)
                 print('Voce escolheu alterar dados pessoais')
                 print('-' * 100)
                 escolha = escolha_usuario()
                 alterar_dados_pessoais(conexao, cpf, escolha)
 
 
-            elif menu == '4':
+            elif menu == '3':
                 print('-' * 100)
                 print('Voce escolheu excluir seus dados pessoais')
                 print('-' * 100)
                 excluir_dados_pessoais(conexao, cpf)
 
                 
-            elif menu == '5':
+            elif menu == '4':
                 print('-' * 100)
                 remedios_tomados(conexao)
                 print('-' * 100)
 
-            elif menu == '6':
+            elif menu == '5':
                 print('-' * 100)
                 registros_diarios(conexao)
                 print('-' * 100)
 
-            elif menu == '7':
+            elif menu == '6':
                 print('-' * 100)
                 medicamentos_nao_tomados(conexao)
                 print('-' * 100)
