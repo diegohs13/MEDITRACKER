@@ -193,7 +193,7 @@ def cadastro(conexao_oracle, documento):
     id_medicamento = gerar_id_aleatoria()
     id_tipo_dosagem = gerar_id_aleatoria()
     id_med_dosagem = gerar_id_aleatoria()
-    id_trat_med_paciente = gerar_id_aleatoria()
+    id_trat_med_paciente = documento[3 :6]
     id_paciente = documento[:3]
     
     
@@ -397,7 +397,7 @@ def dados_diario(conexao_oracle, documento):
     insert(conexao_oracle, sql_tb_reg_diario_medicamento, id_registro_diario_med, data_registro, id_trat_med_paciente, medicamento_tomado)
 
 
-def adicionar_medicamento(conexao_oracle, documento):
+'''def adicionar_medicamento(conexao_oracle, documento):
     print('-' * 100)
     print('Olá, vamos fazer algumas perguntas para adicionarmos seu novo medicamento!')
     print('-' * 100)
@@ -431,7 +431,7 @@ def adicionar_medicamento(conexao_oracle, documento):
     insert(conexao_oracle, sql_tb_medicamento, id_medicamento, medicamento, dosagem)
     insert(conexao_oracle, sql_tb_forma_dosagem, id_tipo_dosagem, str_dosagem)
     insert(conexao_oracle, sql_tb_med_dosagem, id_medicamento, id_tipo_dosagem, id_med_dosagem)
-    insert(conexao_oracle, sql_tb_trat_med_paciente, id_trat_med_paciente, data_tratamento, id_doenca, id_paciente, id_med_dosagem)
+    insert(conexao_oracle, sql_tb_trat_med_paciente, id_trat_med_paciente, data_tratamento, id_doenca, id_paciente, id_med_dosagem)'''
 
 
 def escolha_usuario():
