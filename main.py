@@ -647,7 +647,7 @@ def medicamentos_nao_tomados(conexao_oracle):
             and   dime.id_trat_med_paciente = trme.id_trat_med_paciente
             and   trme.id_med_dosagem = medo.id_med_dosagem
             and   medo.id_medicamento = medi.id_medicamento
-            and   dime.sta_medicamento_tomado = 0
+            and   dime.sta_medicamento_tomado = '0'
             group by  nome_medicamento
             ,         nome_paciente
             having count(1) > 1'''

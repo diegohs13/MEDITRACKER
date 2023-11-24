@@ -3,8 +3,8 @@ select doen.nome_doenca
           ,      medi.nome_medicamento
           ,      trmp.data_inicio_tratamento
           ,      redm.data_registro_diario_med data_registro
-          ,      'Medicamento tomado? '|| case when redm.sta_medicamento_tomado = 0 then 'NÃO'
-                                               when redm.sta_medicamento_tomado = 1 then 'SIM'
+          ,      'Medicamento tomado? '|| case when redm.sta_medicamento_tomado = '0' then 'NÃO'
+                                               when redm.sta_medicamento_tomado = '1' then 'SIM'
                                                else null end medicamento_tomado
           ,     redm.id_registro_diario_med 
           ,     paci.id_paciente
@@ -57,7 +57,7 @@ select count(1)
             and   dime.id_trat_med_paciente = trme.id_trat_med_paciente
             and   trme.id_med_dosagem = medo.id_med_dosagem
             and   medo.id_medicamento = medi.id_medicamento
-            and   dime.sta_medicamento_tomado = 0
+            and   dime.sta_medicamento_tomado = '0'
             group by  nome_medicamento
             ,         nome_paciente
             having count(1) > 1;
