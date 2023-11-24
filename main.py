@@ -788,3 +788,4 @@ if __name__ == "__main__":
                 print('-' * 100)
                 medicamentos_nao_tomados(conexao)
                 print('-' * 100)
+
